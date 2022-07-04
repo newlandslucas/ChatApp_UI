@@ -11,6 +11,7 @@
 		A43186992873728000DB249F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43186982873728000DB249F /* ContentView.swift */; };
 		A431869B2873728200DB249F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A431869A2873728200DB249F /* Assets.xcassets */; };
 		A431869E2873728200DB249F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A431869D2873728200DB249F /* Preview Assets.xcassets */; };
+		A43186A52873738B00DB249F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43186A42873738B00DB249F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A43186982873728000DB249F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A431869A2873728200DB249F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A431869D2873728200DB249F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A43186A42873738B00DB249F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				A43186962873728000DB249F /* ChatApp_UIApp.swift */,
 				A43186982873728000DB249F /* ContentView.swift */,
+				A43186A42873738B00DB249F /* HomeView.swift */,
 				A431869A2873728200DB249F /* Assets.xcassets */,
 				A431869C2873728200DB249F /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43186A52873738B00DB249F /* HomeView.swift in Sources */,
 				A43186992873728000DB249F /* ContentView.swift in Sources */,
 				A43186972873728000DB249F /* ChatApp_UIApp.swift in Sources */,
 			);
