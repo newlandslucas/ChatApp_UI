@@ -89,6 +89,23 @@ struct Home: View {
 
                         }
                         .padding()
+                        
+                        ForEach(data, id: \.groupName) {gData in
+                            HStack {
+                                
+                                Text(gData.groupName)
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                                
+                                Spacer(minLength: 0)
+                            }
+                            .padding(.horizontal)
+                            
+                            ForEach(gData.groudData){chatData in
+                                ChatView(chatData: chatData)
+                            }
+                                                        
+                        }
                     }
                     .padding(.vertical)
                 })
@@ -149,6 +166,40 @@ struct CustomCorner: Shape {
     }
 }
 
+struct ChatView: View {
+    
+    var chatData: Chat
+    var body: some View {
+        
+        HStack(spacing: 10) {
+            
+            Image(chatData.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 55, height: 55)
+                .cornerRadius(10)
+            
+            VStack(alignment: .leading, spacing: 8) {
+                
+                Text(chatData.name)
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                
+                Text(chatData.msg)
+                    .font(.caption)
+                    .lineLimit(1)
+                    .foregroundColor(.gray)
+            }
+            Spacer(minLength: 0)
+            
+            Text(chatData.time)
+                .font(.system(size: 12))
+                .fontWeight(.semibold)
+        }
+        .padding(.horizontal)
+    }
+}
+
 struct Chat: Identifiable {
     
     var id = UUID().uuidString
@@ -167,7 +218,24 @@ struct HomeData {
 }
 
 var FriendsChat : [Chat] = [
-    
+    Chat(name: "Barbara Dias", image: "p1", msg: "Hey honey, how are you?", time: "14:45"),
+    Chat(name: "Carlos Arthur", image: "p2", msg: "hi son, how are you?", time: "15:45"),
+    Chat(name: "Eduarda Silveira", image: "p3", msg: "Hi Lucas...", time: "16:55"),
+    Chat(name: "Bill Gates", image: "p4", msg: "Founder of Microsoft", time: "19:00"),
+    Chat(name: "Tim Cook", image: "p5", msg: "Apple Inc CEO", time: "21:00")
+]
+
+var GroupChat : [Chat] = [
+    Chat(name: "Barbara Dias", image: "p1", msg: "Hey honey, how are you?", time: "14:45"),
+    Chat(name: "Carlos Arthur", image: "p2", msg: "hi son, how are you?", time: "15:45"),
+    Chat(name: "Eduarda Silveira", image: "p3", msg: "Hi Lucas...", time: "16:55"),
+    Chat(name: "Bill Gates", image: "p4", msg: "Founder of Microsoft", time: "19:00"),
+    Chat(name: "Tim Cook", image: "p5", msg: "Apple Inc CEO", time: "21:00")
+]
+
+var data = [
+    HomeData(groupName: "Friends", groudData: FriendsChat),
+    HomeData(groupName: "Group Message", groudData: GroupChat)
 ]
 
 struct Home_Previews: PreviewProvider {
