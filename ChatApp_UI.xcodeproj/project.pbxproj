@@ -12,7 +12,6 @@
 		A431869B2873728200DB249F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A431869A2873728200DB249F /* Assets.xcassets */; };
 		A431869E2873728200DB249F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A431869D2873728200DB249F /* Preview Assets.xcassets */; };
 		A43186A52873738B00DB249F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43186A42873738B00DB249F /* HomeView.swift */; };
-		A43186A92875234F00DB249F /* p1.png in Resources */ = {isa = PBXBuildFile; fileRef = A43186A82875234F00DB249F /* p1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,7 @@
 		A431869D2873728200DB249F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A43186A42873738B00DB249F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A43186A6287515BE00DB249F /* ChatApp-UI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ChatApp-UI-Info.plist"; sourceTree = SOURCE_ROOT; };
-		A43186A82875234F00DB249F /* p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p1.png; path = ../../../../Desktop/p1.png; sourceTree = "<group>"; };
+		A43186AA2875241900DB249F /* p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +55,7 @@
 		A43186952873728000DB249F /* ChatApp_UI */ = {
 			isa = PBXGroup;
 			children = (
-				A43186A72875232900DB249F /* Images */,
+				A43186AA2875241900DB249F /* p1.png */,
 				A43186A6287515BE00DB249F /* ChatApp-UI-Info.plist */,
 				A43186962873728000DB249F /* ChatApp_UIApp.swift */,
 				A43186982873728000DB249F /* ContentView.swift */,
@@ -73,14 +72,6 @@
 				A431869D2873728200DB249F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A43186A72875232900DB249F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				A43186A82875234F00DB249F /* p1.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A431869E2873728200DB249F /* Preview Assets.xcassets in Resources */,
-				A43186A92875234F00DB249F /* p1.png in Resources */,
 				A431869B2873728200DB249F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
