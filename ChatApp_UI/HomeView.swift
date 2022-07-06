@@ -13,7 +13,7 @@ struct Home: View {
     
     @State var selectedTab = "Chats"
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             
             VStack {
                 ZStack {
@@ -55,13 +55,46 @@ struct Home: View {
                 .background(Color.white.opacity(0.08))
                 .cornerRadius(15)
                 .padding(.vertical)
+                
             }
             .padding(.bottom)
-            .background(Color("ColorGrayDark"))
+            .background(Color("ColorBlueDark"))
+            .clipShape(CustomCorner(corner: .bottomLeft, size: 65))
             
-            Spacer(minLength: 0)
+            ZStack {
+                Color("ColorBlueDark")
+                
+                Color(.white)
+                    .clipShape(CustomCorner(corner: .topRight, size: 65))
+                
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    
+                    VStack(spacing: 20) {
+                        
+                        HStack {
+                            Text("All Chats")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                            
+                            Spacer(minLength: 0)
+                            
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "slider.horizontal.3")
+                                    .font(.system(size: 22))
+                                    .foregroundColor(.primary)
+                            }
+
+                        }
+                        .padding()
+                    }
+                    .padding(.vertical)
+                })
+            }
         }
-        .background(Color("ColorBlueDark").ignoresSafeArea(.all, edges: .all))
+        .background(Color(.white).ignoresSafeArea(.all, edges: .all))
         .ignoresSafeArea(.all, edges: .top)
     }
 }
@@ -100,6 +133,19 @@ struct TabButton: View {
             )
         }
 
+    }
+}
+
+struct CustomCorner: Shape {
+    
+    var corner: UIRectCorner
+    var size : CGFloat
+    
+    func path(in rect: CGRect) -> Path {
+        
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corner, cornerRadii: CGSize(width: size, height: size))
+        
+        return Path(path.cgPath)
     }
 }
 
