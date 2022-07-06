@@ -149,6 +149,27 @@ struct CustomCorner: Shape {
     }
 }
 
+struct Chat: Identifiable {
+    
+    var id = UUID().uuidString
+    var name: String
+    var image: String
+    var msg: String
+    var time: String
+    
+}
+
+struct HomeData {
+    
+    var groupName: String
+    var groudData: [Chat]
+    
+}
+
+var FriendsChat : [Chat] = [
+    
+]
+
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
