@@ -12,13 +12,13 @@
 
 - In the terminal run this command
 
-  -  `git clone https://github.com/newlandslucas/progressBar.git`
+  -  `git clone https://github.com/newlandslucas/ChatApp_UI.git`
 
 - Open that folder in your XCode
 
 ## Prints
 
-<img src="/ChatApp_UI/Images/p1.png" height="600" width="300"> 
+<img src="/ChatApp_UI/p1.png" height="600" width="300"> 
 
 
 ## Author
